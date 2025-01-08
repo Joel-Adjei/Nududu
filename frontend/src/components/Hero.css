@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Hero-page{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/imgs/BG.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Side Nav */
+.side-nav{
+    height:calc(100vh - 50px);
+    width: 40px;
+    background:rgb(219, 168, 0);
+    transition: 300ms ease-out;
+}
+
+.side-nav:hover{
+    width: 150px;
+}
+.side-nav p{
+    transition: 300ms ease-out;
+    display: none;
+}
+.side-nav:hover p{
+    display: block;
+}
+
+/* AD component */
+.ad-section{
+    background-image: url(../assets/imgs/top-view-table.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130rem;
+    justify-content: end;
+    text-align: center;
+}
+.Bg_Overlay{
+    background: linear-gradient(90deg,rgba(91, 29, 0, 0.591),rgba(40, 13, 0, 0.968) 70%);
+    mix-blend-mode: multiply;
+    position: absolute;
+    z-index: 10;
+}
+.Ad-text{
+    z-index: 11;
+}
+
+/* Footer */
+.footer-main{
+    background: linear-gradient(90deg,rgba(91, 29, 0),rgba(40, 13, 0) 70%);
+}
+.nududu{
+    text-align: center;
+}
+
+
+
+/* Phone Screen */
+@media (max-width: 680px) {
+
+    .Hero-page{
+        overflow: none;
+    }
+
+
+}
+
+/* Laptop */
+@media (min-width: 992px){
+
+}
+
+@media  (max-width:768px){
+
+    .top-food{
+        display: none;
+    }
+    
+    /* AD */
+    .Ad-text h4 {
+        font-size: 35px;
+    }
+    .Ad-text p {
+        font-size: 13px;
+    }
+    .ad-section img{
+        left: 26px;
+    }
+
+
+    /* Footer */
+    .footer-main{
+        padding: 0;
+        justify-content: space-between;
+    }
+    .nududu{
+        display: none;
+    }
+    footer .right-side{
+        display: none;
+    }
+    .footer-main .left-side{
+        left: 75%;
+    }
+    .links{
+
+    }
+    .links ul{
+    }
+}
+
+/* Tablet */
+@media  (max-width:830px){
+    .main_content{
+        /*background-color: aqua;*/
+    }
+
+    .top-food{
+        display: block;
+    }
+
+    .hero-text-main{
+        align-self: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /*background-color: blue; */
+    }
+    .main-text{
+    }
+
+    .main-text span{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .buttons{
+    }
+}
+

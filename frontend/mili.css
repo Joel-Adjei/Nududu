@@ -1,0 +1,159 @@
+/* Styling for the image at the top */
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./src/assets/imgs/white-bg.jpg);
+    background-size: cover;
+}
+.pic-1 {
+    position: absolute; 
+    top: 0; 
+    right: 90%; 
+    transform: translateX(-50%); 
+  }
+  
+  .pic-1 img {
+    width: 100px; 
+    height: 100px;  
+  }
+  
+  .pic-2 {
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+  
+  .pic-2 img {
+    width: 120px; 
+    height: 120px;
+  }
+  
+  .pic-3 {
+    position: absolute; /* Position the div absolutely */
+    top: 50%;            /* Position it vertically at the center of the page */
+    right: 0;            /* Align the div to the right of the page */
+    transform: translateY(-50%); /* Adjust the vertical position to truly center it */
+    z-index: 1;  /* Ensure it has a lower z-index to allow pic-6 to appear above it */
+  }
+  
+  .pic-3 img {
+    width: 700px;  /* Resize the image to 50px wide */
+    height: 700px; /* Keep the aspect ratio intact */
+  }
+  
+  .pic-4 {
+    position: absolute; 
+    bottom: 20px; 
+    left: 2%; 
+    transform: translateX(-50%); 
+  }
+  
+  .pic-4 img {
+    width: 80px; 
+    height: 100px;
+  }
+  
+  .pic-5 {
+    position: absolute; 
+    top: 39%;            
+    right: 0;           
+    transform: translateY(-50%);
+  }
+  
+  .pic-5 img {
+    width: 120px; 
+    height: 100px;
+  }
+  
+  /* Make pic-6 appear on top of pic-3 */
+  .pic-6 {
+    position: absolute; 
+    top:0;     /* Place it vertically in the center of the container */
+    right: 0;
+    transform: translateY(-50%); 
+    opacity: 0.2;  /* Adjust the opacity to make it semi-transparent */
+    z-index: 2;    /* Higher z-index to ensure it stays on top of pic-3 */
+    transform: translateX(-50%); /* Align it horizontally with pic-3 */
+  }
+  
+  .pic-6 img {
+    width: 20px; /* Adjust the image size */
+    transform: rotate(2deg); /* Apply a slight rotation if needed */
+  }
+  
+  .Position-well {
+    position: absolute;
+    padding: 10px;
+  }
+  .pic-7 {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    transform: translateX(-50%); 
+  }
+  
+  .pic-7 img {
+    width: 100px; 
+    height: 100px;
+    transform: rotate(320deg);
+  }
+  .background-pic img {
+    height: 50px;
+    width: 60px;
+  }
+  
+  .pic-two {
+    position: relative;
+    top: 100px;
+  }
+  
+  .title {
+    font-size: 55px;
+    margin-left: 30px;
+    color: rgb(84, 7, 7);
+    font-style: italic;
+    padding-left: 20px;
+    margin-bottom: 0;
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: rgb(255, 179, 38); 
+  }
+  
+  .title2 {
+    margin-bottom: 40px;
+    font-size: 26px;
+    width: 380px;
+    margin-left: 45px;
+    margin-bottom: 0;
+  }
+  
+  .title3 {
+    font-size: 26px;
+    margin-left: 45px;
+    margin-top: 5px;
+    width: 380px;
+  }
+  
+  .title4 {
+    font-size: 26px;
+    margin-left: 45px;
+    color: brown;
+    font-style: italic;
+    text-decoration: underline;
+  }
+  
+  .button {
+    font-size: 22px;
+    height: 40px;
+    width: 100px;
+    margin-left: 45px;
+    border-radius: 5px;
+    color: rgb(70, 7, 7);
+    background-color: rgb(255, 166, 0);
+    border-width: 0;
+    font-weight: 500;
+    font-style: italic;
+  }
