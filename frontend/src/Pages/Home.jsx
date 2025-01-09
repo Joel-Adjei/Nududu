@@ -15,7 +15,7 @@ const Home = () => {
         <div className='hidden md:block'>
         <Ad />
         </div>
-       
+
         <DeliverySection />
         <Footer />
     </div>

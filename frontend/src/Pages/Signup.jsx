@@ -3,13 +3,26 @@ import { useNavigate } from 'react-router-dom'
 import TopNav from '../components/TopNav'
 import BG from '../assets/imgs/BG.jpg'
 import Input from '../components/Signup/Input'
-import { AiOutlineGoogle } from 'react-icons/ai'
+import { AiFillEye, AiOutlineGoogle, AiTwotoneEyeInvisible } from 'react-icons/ai'
+import { FaUser } from 'react-icons/fa'
 
 const Signup = () => {
   const [userName , setuserName] = useState('')
   const [email , setemail] = useState('')
   const [password , setpassword] = useState('')
   const [confrimPassword , setconfrimPassword] = useState('')
+
+  const [theType, setTheType] = useState('password')
+
+  const viewPassword = (e) => {
+    e.preventDefault()
+    theType == 'text' ? setTheType('password') : setTheType('text')
+    
+  }
+
+  const inputStyle = 'w-full outline-0 border-b-1 border-brown text-[18px] py-[7px] pl-[15px] placeholder:text-gray-600'
+
+
 
   const navigate = useNavigate()
 
@@ -18,8 +31,11 @@ const Signup = () => {
   })
 
   const submit = (e) => {
+    e.preventDefault()
     {<div className='absolute top-0 size-full bg-brown'> <p>rrrr{userName}</p> </div>}
-    setuserName('Hell')
+    setuserName('dfffdfd')
+    console.log(useDetails)
+    
   }
   const useDetails = {
     name : userName
@@ -34,7 +50,7 @@ const Signup = () => {
         <div className=' lg:hidden'>
           <Input />
         </div>
-
+    
 
       </div>
 
@@ -46,17 +62,21 @@ const Signup = () => {
         <div className="h-[3px] w-[100px] bg-yellowLike"></div>
       </div>
 
-      <form  className='w-[95%] flex flex-col items-center z-50' >
-        <Input  placeholder={'Name'} type={'text'}  />
-        <Input placeholder={'Email'} type={'email'}  />
-        <Input placeholder={'Phone number'} type={'number'} />
+      <form onSubmit={submit} className='w-[95%] flex flex-col items-center z-50' >
 
+      <div className='w-[85%] font-[Montserrat] mt-[15px] '>
+        <input className={inputStyle} 
+        type='text' value={userName} onChange={(e) => e.target.value} placeholder= 'Name'  />
+
+        <div>
+          <FaUser />
+        </div>
+      </div>
+        
         <div className="flex flex-col w-[90%] mt-[20px]">
           <p className='text-[12px]'>Create password</p>
           <div className='h-[2px] w-full bg-gray-300 w-full '></div>
         </div>
-        <Input placeholder={'Password'} type={'text'} />
-        <Input placeholder={'Repeat Password'} type={'text'} />
 
         <button onClick={ submit} className='py-[10px] px-[20px] bg-yellowLike font-bold text-brown mt-[20px]' type='submit'>
           Signup

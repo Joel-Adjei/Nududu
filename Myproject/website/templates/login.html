@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nududu | Login Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form method="POST" action="{{ url_for('auth.login') }}">
+      {{ form.hidden_tag() }}
+
+      <h1>Sign In</h1>
+
+
+      <div class="input-box">
+        <label for="email">Email</label>
+        {{ form.email(id="email") }}
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+        <label for="password">Password</label>
+        {{ form.password(id="password") }}
+        <i class='bx bxs-lock-open-alt'></i>
+      </div>
+
+  
+      <div>
+        {{ form.submit(class_="btn") }}
+      </div>
+      
+    
+
+
+    <div class="register-link">
+      <p>Don`t have an account? <a href="{{ url_for('auth.sign_up') }}">Sign Up</a></p>
+    </div>
+      
+    </form>
+  </div>
+</body>
+</html>

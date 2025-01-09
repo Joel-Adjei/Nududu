@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nududu | {% block title%} {% endblock%}</title>
+ </head>
+ <body style = "background-color: purple;">
+    <navbar>
+        <button style = "color: rgb(35, 3, 108);">Home</button>
+        <button style = "color: rgb(35, 3, 108);", href="#">About</button>
+        <button style = "color: rgb(35, 3, 108);", href="#">Cart</button>
+        <button style = "color: rgb(35, 3, 108,);", href="{{ url_for('auth.login') }}">Sign in</button>
+        <button style = "color: rgb(35, 3, 108);", href="{{ url_for('auth.sign_up') }}">Sign Up</button>
+    </navbar>
+
+    {% block body%} {% endblock%}
+ </body>
+ </html>

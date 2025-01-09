@@ -5,6 +5,7 @@ const About = () => {
   return (
     <div>
       <TopNav />
+      
     </div>
   )
 }
